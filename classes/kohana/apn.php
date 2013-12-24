@@ -19,7 +19,7 @@ class Kohana_APN {
 
 	public static function factory($app) {
 		$apn = new APN();
-        $apn->m_config = Kohana::$config->load("apn");
+        $apn->m_config = (array) Kohana::$config->load("apn");
         $apn->m_app_config = $apn->m_config[$app];
 
         return $apn;
